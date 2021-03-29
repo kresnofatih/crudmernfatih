@@ -9,13 +9,13 @@ function App() {
   const [newFoodName, setNewFoodName] = useState('')
   
   useEffect(()=>{
-    Axios.get('http://localhost:3001/read').then((response)=>{
+    Axios.get('https://crudmernfatih.herokuapp.com/read').then((response)=>{
       setFoodList(response.data.map(food=>food));
     })
   }, [])
 
   const addToList = ()=>{
-    Axios.post('http://localhost:3001/add', {
+    Axios.post('https://crudmernfatih.herokuapp.com/add', {
       foodName: foodName, days: days
     });
     setFoodName('');
@@ -23,14 +23,14 @@ function App() {
   }
 
   const updateFood = (id)=>{
-    Axios.put('http://localhost:3001/update', {
+    Axios.put('https://crudmernfatih.herokuapp.com/update', {
       id: id,
       newFoodName: newFoodName
     })
   }
 
   const deleteFood = (id)=>{
-    Axios.delete(`http://localhost:3001/delete/${id}`);
+    Axios.delete(`https://crudmernfatih.herokuapp.com/delete/${id}`);
   }
 
   return (
