@@ -1,5 +1,19 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.submitbtn {
+  background-color: aqua;
+}
+
+.foodform {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  width: 300px;
+  border: 1px solid red;
 }
 
 .App-logo {
